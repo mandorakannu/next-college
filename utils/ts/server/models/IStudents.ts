@@ -2,6 +2,7 @@ import { ObjectId } from "mongoose";
 import { IDegree } from "./IDegrees";
 import { IBook } from "./IBooks";
 export interface IStudent {
+  role: "student";
   _id: ObjectId | string | number;
   name: string;
   email: string;

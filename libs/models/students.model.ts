@@ -2,6 +2,7 @@ import { model, models, Schema } from "mongoose";
 import { IStudent } from "@myTypes/server/models/IStudents";
 
 const studentSchema = new Schema<Required<IStudent>>({
+  role: { type: String, required: true, lowercase: true, default: "student" },
   _id: Schema.Types.ObjectId || String || Number,
   name: { type: String, required: true, lowercase: true },
   email: { type: String, required: true, lowercase: true },
