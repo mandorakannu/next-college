@@ -6,6 +6,7 @@ const studentSchema = new Schema<Required<IStudent>>({
   _id: Schema.Types.ObjectId || String || Number,
   name: { type: String, required: true, lowercase: true },
   email: { type: String, required: true, lowercase: true },
+  number: { type: Number, required: true },
   age: { type: Number, required: true },
   class: { type: String, required: true, lowercase: true },
   classId: { type: String, required: true, lowercase: true },

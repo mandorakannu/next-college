@@ -6,6 +6,7 @@ export interface IStudent {
   _id: ObjectId | string | number;
   name: string;
   email: string;
+  number: number;
   age: number;
   class: IDegree["degree"];
   classId: IDegree["_id"];
