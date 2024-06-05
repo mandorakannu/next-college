@@ -2,12 +2,11 @@ import z from "zod";
 import { connect, disconnect } from "mongoose";
 
 const connectToDatabase = async () => {
-  const MONGO_URI = z.string().parse(process.env.MONGO_MONGO_URI);
   try {
-    if (!MONGO_URI)
-      throw new Error(
-        "MONGO_URI is not defined, Please define it in .env file"
-      );
+    const MONGO_URI = z.string().parse(process.env.MONGO_URI, {
+      errorMap: (error) =>
+        new Error("MONGO_URI is not defined, Please define it in .env file"),
+    });
     await connect(MONGO_URI);
     console.log("Connected To Database...");
   } catch (error) {
