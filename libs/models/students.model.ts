@@ -45,6 +45,7 @@ const studentSchema = new Schema<Required<IStudent>>({
     isLibraryMember: { type: Boolean, required: true },
     books: { type: [String], required: true, lowercase: true },
     fine: { type: Number, required: true },
+    isOwnerOnFine: { type: Boolean, required: true },
   },
 
   transport: {

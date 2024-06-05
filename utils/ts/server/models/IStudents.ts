@@ -1,12 +1,13 @@
 import { ObjectId } from "mongoose";
-
+import { IDegree } from "./IDegrees";
+import { IBook } from "./IBooks";
 export interface IStudent {
   _id: ObjectId | string | number;
   name: string;
   email: string;
   age: number;
-  class: string;
-  classId: string;
+  class: IDegree["degree"];
+  classId: IDegree["_id"];
   gender: "Male" | "Female";
   subjects: [{ subject: string; marks: number }][];
   fees: {
@@ -36,8 +37,9 @@ export interface IStudent {
     transportType: "Bus" | "Van" | "None";
   };
   library: {
-    isLibraryMember: boolean;
-    books: string | string[];
-    fine: number | "NIL";
+    isLibraryMember: IBook;
+    books: IBook["bookName"] | IBook["bookName"][];
+    isOwnerOnFine: IBook["isOwnerOnFine"];
+    fine: IBook["fine"];
   };
 }
