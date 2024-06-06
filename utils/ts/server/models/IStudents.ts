@@ -8,6 +8,7 @@ export interface IStudent {
   email: string;
   number: number;
   age: number;
+  password?: string;
   class: IDegree["degree"];
   classId: IDegree["_id"];
   gender: "Male" | "Female";

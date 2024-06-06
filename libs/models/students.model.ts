@@ -11,6 +11,7 @@ const studentSchema = new Schema<Required<IStudent>>({
   class: { type: String, required: true, lowercase: true },
   classId: { type: String, required: true, lowercase: true },
   gender: { type: String, required: true, lowercase: true },
+  password: { type: String },
   subjects: [
     {
       subject: { type: String, required: true, lowercase: true },

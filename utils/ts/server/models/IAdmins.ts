@@ -1,13 +1,12 @@
 import { ObjectId } from "mongoose";
 
-export interface ITeachers {
+export interface IAdmins {
   _id: ObjectId | string | number;
-  role: "teacher";
+  role: "admin";
   name: string;
   age: number;
   email: string;
   phoneNumber: number;
-  subject: string;
   department: string;
   departmentId: string | number;
   salary: number;
