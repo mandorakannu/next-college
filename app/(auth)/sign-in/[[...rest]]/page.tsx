@@ -1,11 +1,7 @@
 import { SignIn } from "@clerk/nextjs";
 
 const LoginPage = () => {
-  return (
-    <section className="flex justify-center items-center h-screen">
-      <SignIn signUpUrl="/sign-up" />
-    </section>
-  );
+  return <SignIn signUpUrl="/sign-up" />;
 };
 
 export default LoginPage;
