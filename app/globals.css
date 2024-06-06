@@ -10,4 +10,10 @@
     width: auto;
     height: 100dvh;
   }
+
+  @media screen and (max-width: 768px) {
+    .main__homepage__backgroundImage {
+    background-position: left;
+    }
+  }
   
