@@ -6,7 +6,7 @@ export const Navigation = async () => {
   const user = await currentUser();
   return (
     <>
-      <nav className="bg-sky-600 p-4 fixed w-full">
+      <nav className="bg-sky-600 p-4 sticky top-0 w-full">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="text-white text-2xl font-bold">
             Core Campus
